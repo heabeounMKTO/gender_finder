@@ -6,8 +6,9 @@ import configparser
 
 config = configparser.ConfigParser()
 config.read("config.ini")
-
-MODEL_NAME = config["LLAMA_MODEL"]["WIZARD"]
+ADDRESS = config["SERVER"]["ADDRESS"]
+PORT = int(config["SERVER"]["PORT"])
+MODEL_NAME = config["LLAMA_MODEL"]["MODEL"]
 # llama model
 llm = Llama(
     model_path=f"/tmp/models/{MODEL_NAME}",
@@ -40,4 +41,4 @@ def general(prompt):
     result = llm.create_chat_completion(messages=[{"role": "user", "content": prompt}])
 
 
-run(host="0.0.0.0", port=5008, server="paste")
+run(host=ADDRESS, port=PORT, server="paste")
