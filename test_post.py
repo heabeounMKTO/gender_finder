@@ -5,7 +5,7 @@ import argparse
 
 
 def get_gender(name: str, song: str):
-    url ="http://localhost:5008/get_gender"
+    url ="http://172.16.0.250:5008/get_gender"
     myobj = {"artist_name":f"{name}", "artist_song":f"{song}"}
     x = requests.post(url, json=myobj)
     res = x.json()
