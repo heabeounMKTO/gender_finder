@@ -9,7 +9,7 @@ i got fed up with using ChatGPT's api's free tier's (broke boy speaking) limitat
 ### how it works
 
 this is basically overkill (or maybe it's just that im lazy to come up with a "smart" solution), it uses 
-`llama-cpp-python` for llama2 model inference with `bottle` server as a rest api.
+`llama-cpp-python` for llama2 model inference with `bottle` server (i can use flask but i want to be a hipster) as a rest api.
 
 ### installation
 
